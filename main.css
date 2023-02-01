@@ -109,11 +109,6 @@ main {
    * Correct the font size and margin on `h1` elements within `section` and
    * `article` contexts in Chrome, Firefox, and Safari.
    */
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
-
 /* Grouping content
      ========================================================================== */
 /**
@@ -408,12 +403,8 @@ html {
 .header {
   display: flex;
   align-items: center;
-  height: 80px;
-}
-.header .container {
-  display: flex;
-  align-items: center;
   justify-content: space-between;
+  height: 80px;
 }
 .header-leftNav {
   display: flex;
@@ -432,4 +423,61 @@ html {
 .header .appBadges {
   display: flex;
   gap: 12px;
+}
+
+.hero-content {
+  margin-top: 72px;
+  display: flex;
+  justify-content: space-between;
+}
+.hero-content-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 648px;
+  margin-top: 96px;
+}
+.hero-content-heading-title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.025em;
+  color: #111827;
+}
+.hero-content-heading-details {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #374151;
+}
+.hero-content-heading-ctas {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+.hero-content-heading-ctas div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding: 16px 24px;
+  border-radius: 8px;
+}
+.hero-content-heading-ctas-left {
+  background-color: #7c3aed;
+  color: #fff;
+}
+.hero-content-heading-ctas-right {
+  color: #7c3aed;
+}
+.hero-content-heading-ctas-right img {
+  margin-right: 10px;
+}
+.hero-content-mockup img {
+  padding-left: 84px;
+  padding-right: 84px;
 }

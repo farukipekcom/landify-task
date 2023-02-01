@@ -1,12 +1,8 @@
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   &-leftNav {
     display: flex;
     align-items: center;
