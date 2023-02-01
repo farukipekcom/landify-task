@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+body,
+html {
+  font-family: $font-family;
+}
+.container {
+  width: $container;
+  margin: 0 auto;
+}
+
+.hero {
+  background: url("/images//background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 860px;
+}
