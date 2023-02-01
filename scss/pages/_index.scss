@@ -58,3 +58,28 @@
     }
   }
 }
+.logo-clouds {
+  height: 142px;
+  .container {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &-divider {
+    width: 100%;
+    height: 1px;
+    background-color: $neutral200;
+  }
+
+  &-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 64px;
+    img {
+    }
+  }
+}

@@ -481,3 +481,26 @@ html {
   padding-left: 84px;
   padding-right: 84px;
 }
+
+.logo-clouds {
+  height: 142px;
+}
+.logo-clouds .container {
+  padding-top: 16px;
+  padding-bottom: 16px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo-clouds-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #e5e7eb;
+}
+.logo-clouds-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
