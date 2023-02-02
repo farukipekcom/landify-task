@@ -1,0 +1,51 @@
+.footer {
+  background-color: $black;
+  color: #fff;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  &-left {
+    &-links {
+      margin-top: 24px;
+
+      &-link {
+        display: flex;
+        gap: 24px;
+
+        li {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        &+& {
+          margin-top: 12px;
+        }
+      }
+
+    }
+
+    &-copyright {
+      margin-top: 24px;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: $neutral300;
+    }
+  }
+
+  &-right {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 28px;
+    color: $neutral300;
+  }
+}
