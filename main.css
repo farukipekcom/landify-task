@@ -389,8 +389,19 @@ html {
 }
 
 .container {
-  width: 1200px;
-  margin: 0 auto;
+  width: 100%;
+  padding: 40px 20px;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 64px 40px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+  }
 }
 
 .hero {
@@ -429,23 +440,37 @@ html {
   background-color: #000;
   color: #fff;
 }
-.footer .container {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 64px;
-  padding-bottom: 64px;
+@media (min-width: 768px) {
+  .footer .container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
 }
 .footer-left-links {
   margin-top: 24px;
 }
 .footer-left-links-link {
   display: flex;
-  gap: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .footer-left-links-link {
+    gap: 24px;
+  }
 }
 .footer-left-links-link li {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  margin-right: 12px;
+}
+@media (min-width: 768px) {
+  .footer-left-links-link li {
+    margin-right: 0px;
+  }
 }
 .footer-left-links-link + .footer-left-links-link {
   margin-top: 12px;
@@ -465,6 +490,16 @@ html {
   font-size: 18px;
   line-height: 28px;
   color: #d1d5db;
+  margin-top: 32px;
+}
+@media (min-width: 768px) {
+  .footer-right {
+    margin-top: 0px;
+  }
+}
+.footer-right img {
+  max-width: 133px;
+  max-height: 38px;
 }
 
 .hero-content {
