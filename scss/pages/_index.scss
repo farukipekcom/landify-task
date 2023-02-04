@@ -3,12 +3,14 @@
     margin-top: 72px;
     display: flex;
     justify-content: space-between;
+
     &-heading {
       display: flex;
       flex-direction: column;
       gap: 16px;
       width: 648px;
       margin-top: 96px;
+
       &-title {
         font-weight: 700;
         font-size: 60px;
@@ -16,17 +18,20 @@
         letter-spacing: -0.025em;
         color: $neutral900;
       }
+
       &-details {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
         color: $neutral700;
       }
+
       &-ctas {
         display: flex;
         align-items: center;
         gap: 16px;
         margin-top: 16px;
+
         div {
           display: flex;
           align-items: center;
@@ -38,18 +43,22 @@
           padding: 16px 24px;
           border-radius: 8px;
         }
+
         &-left {
           background-color: $primary600;
           color: #fff;
         }
+
         &-right {
           color: $primary600;
+
           img {
             margin-right: 10px;
           }
         }
       }
     }
+
     &-mockup {
       img {
         padding-left: 84px;
@@ -58,6 +67,7 @@
     }
   }
 }
+
 .logo-clouds {
   height: 142px;
   .container {
@@ -73,7 +83,6 @@
     height: 1px;
     background-color: $neutral200;
   }
-
   &-logos {
     display: flex;
     justify-content: center;
@@ -83,6 +92,7 @@
     }
   }
 }
+
 .features {
   display: flex;
   padding-top: 96px;
@@ -147,67 +157,147 @@
     }
   }
 }
+
 .testimonial {
   background-color: $secondary100;
-  padding-top: 120px;
-  padding-left: 216px;
+ @include mq("large") {
+    // padding-top: 120px;
+    // padding-left: 216px;
+  }
   .container {
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include mq("tablet") {
+      padding-top: 64px;
+      padding-bottom: 80px;
+    }
+    @include mq('desktop') { 
+    }
+    @include mq("large") {
+      padding-top: 64px;
+      padding-bottom: unset;
+    }
     position: relative;
   }
+  &-icon {
+    position: absolute;
+    z-index: 1;
+    left:12px;
+    width: 96px;
+    height: 78px;
+    @include mq("tablet") {
+      left:24px;
+      width: 141px;
+      height: 116px;
+    }
+    @include mq("large") {
+      left:0px;
+      width: unset;
+      height: unset;
+      
+    }
+  }
+  &-heading {
+    color: $neutral900;
+    width: 100%;
+    margin-top:32px;
+    @include mq("tablet") {
+      margin-top:56px;
+    }
+    @include mq("large") {
+      width: 488px;
+      position: absolute;
+    }
+    &-title {
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 40px;
+      z-index: 2;
+      position: relative;
+      @include mq("tablet") {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 45px;
+        letter-spacing: -0.025em;
+      }
+      @include mq("large") {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 60px;
+        letter-spacing: -0.025em;
+      }
+    }
+
+    &-description {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 24px;
+      margin-top: 8px;
+      @include mq("tablet") {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+      }
+      @include mq("large") {
+        margin-top: unset;
+      }
+    }
+  }
   &-items {
-    display: flex;
-    flex-direction: row;
-    gap: 32px;
-    padding-left: 104px;
-    padding-top: 76px;
-    padding-bottom: 96px;
-    &-right {
+    margin-top: 32px;
+    @include mq("tablet") {
       display: flex;
       flex-direction: column;
+      margin-top:40px;
+    }
+    @include mq("large") {
+      display: flex;
+      flex-direction: row;
       gap: 32px;
+      padding-left: 104px;
+      padding-top: 92px;
+      padding-bottom: 96px;
+    }
+    &-right {
+      @include mq("large") {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+      }
       .testimonial-item {
-        margin-top: 0px;
+        margin-top: 24px;
+        @include mq("tablet") {
+          margin-top: 24px;
+        }
+        @include mq('large') { 
+         margin-top:unset;
+        }
         &:nth-child(1) {
-          width: 488px;
+          width: 100%;
+          @include mq("large") {
+            width: 488px;
+          }
         }
         &:nth-child(2) {
-          width: 384px;
+          width: 100%;
+          @include mq("large") {
+            width: 384px;
+          }
         }
       }
     }
   }
-  &-icon {
-    position: absolute;
-    top: -56px;
-    left: -112px;
-    z-index: 1;
-  }
-  &-heading {
-    color: $neutral900;
-    width: 488px;
-    position: absolute;
-    &-title {
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 60px;
-      letter-spacing: -0.025em;
-      z-index: 2;
-      position: relative;
-    }
-    &-description {
-      font-weight: 400;
-      font-size: 18px;
-      line-height: 28px;
-    }
-  }
   &-item {
+    width: 100%;
     display: inline-block;
     height: fit-content;
     padding: 32px;
     background-color: #fff;
     border-radius: 8px;
-    margin-top: 144px;
-    width: 384px;
+    @include mq("large") {
+      margin-top: 136px;
+      width: 384px;
+    }
     &-logo {
     }
     &-content {

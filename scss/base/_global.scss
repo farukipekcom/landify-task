@@ -14,8 +14,10 @@ html {
   }
 
   @include mq("desktop") {
-    width: $container;
     margin: 0 auto;
+  }
+  @include mq("large") {
+    width: $container;
   }
 }
 
