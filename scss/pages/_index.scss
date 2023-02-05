@@ -95,46 +95,79 @@
 
 .features {
   display: flex;
-  padding-top: 96px;
-  padding-bottom: 96px;
   .container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    @include mq("tablet") {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
   }
   &-title {
     font-weight: 700;
-    font-size: 48px;
-    line-height: 60px;
+    font-size: 36px;
+    line-height: 45px;
     letter-spacing: -0.025em;
     text-align: center;
-    width: 800px;
     margin: 0 auto;
     color: $neutral900;
+    @include mq("tablet") {
+      font-weight: 700;
+      font-size: 48px;
+      line-height: 60px;
+      letter-spacing: -0.025em;
+    }
+    @include mq("desktop") {
+      width: 800px;
+    }
   }
   &-description {
     font-weight: 400;
     font-size: 18px;
     line-height: 28px;
     text-align: center;
-    width: 800px;
     margin: 0 auto;
     color: $neutral900;
     margin-top: 8px;
+    @include mq("desktop") {
+      width: 800px;
+    }
   }
   &-items {
-    margin-top: 64px;
     display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 48px;
+    @include mq("tablet") {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      gap: 30px;
+      margin-top: 64px;
+    }
+    @include mq("desktop") {
+    }
     &-item {
-      width: calc(33.3% - 20px);
       display: flex;
       flex-direction: column;
       align-items: center;
-      &:nth-child(n + 4) {
-        margin-top: 34px;
+      @include mq("tablet") {
+        width: calc(50% - 15px);
+        margin-bottom: 34px;
       }
+      @include mq("desktop") {
+        width: calc(33.3% - 20px);
+        margin-bottom: unset;
+      }
+      &:nth-child(n + 4) {
+        @include mq("desktop") {
+          margin-top: 34px;
+        }
+      }
+
       &-icon {
       }
       &-content {
@@ -160,7 +193,7 @@
 
 .testimonial {
   background-color: $secondary100;
- @include mq("large") {
+  @include mq("large") {
     // padding-top: 120px;
     // padding-left: 216px;
   }
@@ -171,7 +204,7 @@
       padding-top: 64px;
       padding-bottom: 80px;
     }
-    @include mq('desktop') { 
+    @include mq("desktop") {
     }
     @include mq("large") {
       padding-top: 64px;
@@ -182,27 +215,26 @@
   &-icon {
     position: absolute;
     z-index: 1;
-    left:12px;
+    left: 12px;
     width: 96px;
     height: 78px;
     @include mq("tablet") {
-      left:24px;
+      left: 24px;
       width: 141px;
       height: 116px;
     }
     @include mq("large") {
-      left:0px;
+      left: 0px;
       width: unset;
       height: unset;
-      
     }
   }
   &-heading {
     color: $neutral900;
     width: 100%;
-    margin-top:32px;
+    margin-top: 32px;
     @include mq("tablet") {
-      margin-top:56px;
+      margin-top: 56px;
     }
     @include mq("large") {
       width: 488px;
@@ -248,7 +280,7 @@
     @include mq("tablet") {
       display: flex;
       flex-direction: column;
-      margin-top:40px;
+      margin-top: 40px;
     }
     @include mq("large") {
       display: flex;
@@ -269,8 +301,8 @@
         @include mq("tablet") {
           margin-top: 24px;
         }
-        @include mq('large') { 
-         margin-top:unset;
+        @include mq("large") {
+          margin-top: unset;
         }
         &:nth-child(1) {
           width: 100%;

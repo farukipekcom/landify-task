@@ -8,11 +8,9 @@ html {
 .container {
   width: 100%;
   padding: 40px 20px;
-
   @include mq("tablet") {
     padding: 64px 40px;
   }
-
   @include mq("desktop") {
     margin: 0 auto;
   }
