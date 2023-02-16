@@ -10,11 +10,12 @@
 </head>
 
 <body>
+    <div class="background"></div>
     <div class="hero">
         <div class="container">
-            <header class="header">
+            <header class="header" id="header">
                 <div class="header-leftNav">
-                    <img src="images/logo.svg" alt="">
+                    <img src="images/logo.svg" class="logo" alt="">
                     <nav class="header-leftNav-menu">
                         <ul>
                             <li>Features</li>
@@ -27,6 +28,10 @@
                 <div class="appBadges">
                     <img src="images/badge-google-play.svg" alt="">
                     <img src="images/badge-appstore.svg" alt="">
+                </div>
+                <div class="header-mobilemenu">
+                    <img id="toggle2" src="images/menu.svg" class="mobile" alt="">
+                    <img id="toggle3" src="images/cross.svg" class="cross" alt="">
                 </div>
             </header>
             <div class="hero-content">
@@ -217,6 +222,26 @@
             </div>
         </div>
     </div>
+    <script>
+        const toggle2 = document.getElementById("toggle2");
+        const toggle3 = document.getElementById("toggle3");
+        const toggle2Box = document.getElementById("header");
+        const varmi = () =>
+            toggle2Box.classList.contains("mobile-menu");
+        toggle2.addEventListener("click", function () {
+            if (varmi()) {
+                toggle2Box.classList.remove("mobile-menu")
+            } else {
+                toggle2Box.classList.add("mobile-menu")
+            }
+        }); toggle3.addEventListener("click", function () {
+            if (varmi()) {
+                toggle2Box.classList.remove("mobile-menu")
+            } else {
+                toggle2Box.classList.add("mobile-menu")
+            }
+        });
+    </script>
 </body>
 
 </html>

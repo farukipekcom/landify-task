@@ -1,37 +1,78 @@
 .hero {
   .container {
-    padding-top: 24px;
-    padding-bottom: 24px;
-    padding-left: 0px;
-    padding-right: 0px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    @include mq("tablet") {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+    @include mq("desktop") {
+      padding-top: 24px;
+      padding-bottom: 24px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+    @include mq("large") {
+      padding-left: 0px;
+      padding-right: 0px;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
   }
   &-content {
-    margin-top: 72px;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
-
+    margin-top: 64px;
+    @include mq("tablet") {
+      margin-top: 0px;
+    }
+    @include mq("desktop") {
+      flex-direction: row;
+      margin-top: 72px;
+    }
     &-heading {
       display: flex;
       flex-direction: column;
       gap: 16px;
-      width: 648px;
-      margin-top: 96px;
-
+      @include mq("tablet") {
+        padding-top: 80px;
+        padding-bottom: 80px;
+      }
+      @include mq("desktop") {
+        width: 648px;
+        padding-top: 96px;
+        padding-bottom: 0px;
+      }
       &-title {
         font-weight: 700;
-        font-size: 60px;
-        line-height: 72px;
+        font-size: 36px;
+        line-height: 45px;
         letter-spacing: -0.025em;
         color: $neutral900;
+        @include mq("tablet") {
+          font-weight: 700;
+          font-size: 48px;
+          line-height: 60px;
+          letter-spacing: -0.025em;
+        }
+        @include mq("desktop") {
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 72px;
+          letter-spacing: -0.025em;
+        }
       }
-
       &-details {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
         color: $neutral700;
       }
-
       &-ctas {
         display: flex;
         align-items: center;
@@ -66,9 +107,19 @@
     }
 
     &-mockup {
+      margin-top: 80px;
+      display: flex;
+      justify-content: center;
+      @include mq("tablet") {
+        margin-top: 0px;
+        display: flex;
+        justify-content: center;
+      }
       img {
-        padding-left: 84px;
-        padding-right: 84px;
+        @include mq("tablet") {
+          padding-left: 84px;
+          padding-right: 84px;
+        }
       }
     }
   }
@@ -76,8 +127,10 @@
 
 .logo-clouds {
   height: auto;
+  margin-top: 70px;
   @include mq("desktop") {
     height: 142px;
+    margin-top: 0px;
   }
   .container {
     padding-top: 16px;
