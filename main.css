@@ -618,16 +618,18 @@ html {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 28px;
-  color: #d1d5db;
   margin-top: 32px;
 }
 @media (min-width: 768px) {
   .footer-right {
     margin-top: 0px;
   }
+}
+.footer-right h3 {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 28px;
+  color: #d1d5db;
 }
 .footer-right img {
   max-width: 133px;

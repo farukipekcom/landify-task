@@ -2,7 +2,7 @@
   background-color: $black;
   color: #fff;
   .container {
-    @include mq('tablet') {
+    @include mq("tablet") {
       display: flex;
       justify-content: space-between;
       padding-top: 64px;
@@ -15,26 +15,25 @@
       margin-top: 24px;
       &-link {
         display: flex;
-        flex-wrap:wrap;
+        flex-wrap: wrap;
         gap: 12px;
-        @include mq('tablet') { 
-         gap:24px;
+        @include mq("tablet") {
+          gap: 24px;
         }
         li {
           font-weight: 400;
           font-size: 16px;
           line-height: 24px;
-          margin-right:12px;
-          @include mq('tablet') { 
-           margin-right:0px;
+          margin-right: 12px;
+          @include mq("tablet") {
+            margin-right: 0px;
           }
         }
-        
-        &+& {
+
+        & + & {
           margin-top: 12px;
         }
       }
-
     }
 
     &-copyright {
@@ -50,17 +49,21 @@
     display: flex;
     flex-direction: column;
     gap: 16px;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 28px;
-    color: $neutral300;
+
     margin-top: 32px;
-    @include mq('tablet') { 
-     margin-top:0px;
+
+    @include mq("tablet") {
+      margin-top: 0px;
     }
-    img{
-      max-width:133px;
-      max-height:38px
+    h3 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 28px;
+      color: $neutral300;
+    }
+    img {
+      max-width: 133px;
+      max-height: 38px;
     }
   }
 }
