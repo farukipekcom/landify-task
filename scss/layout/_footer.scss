@@ -9,7 +9,6 @@
       padding-bottom: 64px;
     }
   }
-
   &-left {
     &-links {
       margin-top: 24px;
@@ -17,6 +16,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 12px;
+        cursor: pointer;
         @include mq("tablet") {
           gap: 24px;
         }
@@ -35,7 +35,6 @@
         }
       }
     }
-
     &-copyright {
       margin-top: 24px;
       font-weight: 400;
@@ -44,14 +43,11 @@
       color: $neutral300;
     }
   }
-
   &-right {
     display: flex;
     flex-direction: column;
     gap: 16px;
-
     margin-top: 32px;
-
     @include mq("tablet") {
       margin-top: 0px;
     }
@@ -64,6 +60,7 @@
     img {
       max-width: 133px;
       max-height: 38px;
+      cursor: pointer;
     }
   }
 }

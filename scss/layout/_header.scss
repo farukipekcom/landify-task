@@ -18,6 +18,9 @@
           font-weight: 600;
           font-size: 14px;
           line-height: 20px;
+          li {
+            cursor: pointer;
+          }
         }
       }
       @include mq("desktop") {
@@ -26,11 +29,11 @@
     }
     .logo {
       z-index: 1;
+      cursor: pointer;
     }
   }
   .appBadges {
     display: none;
-
     @include mq("tablet") {
       display: flex;
       gap: 12px;
@@ -43,6 +46,9 @@
       gap: 12px;
       margin-left: unset;
       margin-right: unset;
+    }
+    img {
+      cursor: pointer;
     }
   }
   &-mobilemenu {

@@ -78,7 +78,6 @@
         align-items: center;
         gap: 16px;
         margin-top: 16px;
-
         div {
           display: flex;
           align-items: center;
@@ -90,22 +89,20 @@
           padding: 16px 24px;
           border-radius: 8px;
         }
-
         &-left {
           background-color: $primary600;
           color: #fff;
+          cursor: pointer;
         }
-
         &-right {
           color: $primary600;
-
+          cursor: pointer;
           img {
             margin-right: 10px;
           }
         }
       }
     }
-
     &-mockup {
       margin-top: 80px;
       display: flex;
@@ -157,8 +154,6 @@
       justify-content: center;
       align-items: center;
       gap: 64px;
-    }
-    img {
     }
   }
 }
@@ -263,18 +258,12 @@
 
 .testimonial {
   background-color: $secondary100;
-  @include mq("large") {
-    // padding-top: 120px;
-    // padding-left: 216px;
-  }
   .container {
     padding-top: 48px;
     padding-bottom: 48px;
     @include mq("tablet") {
       padding-top: 64px;
       padding-bottom: 80px;
-    }
-    @include mq("desktop") {
     }
     @include mq("large") {
       padding-top: 64px;
@@ -399,8 +388,6 @@
     @include mq("large") {
       margin-top: 136px;
       width: 384px;
-    }
-    &-logo {
     }
     &-content {
       display: flex;

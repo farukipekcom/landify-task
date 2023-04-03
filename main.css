@@ -461,6 +461,9 @@ html {
     font-size: 14px;
     line-height: 20px;
   }
+  .header-leftNav-menu ul li {
+    cursor: pointer;
+  }
 }
 @media (min-width: 992px) {
   .header-leftNav-menu {
@@ -469,6 +472,7 @@ html {
 }
 .header-leftNav .logo {
   z-index: 1;
+  cursor: pointer;
 }
 .header .appBadges {
   display: none;
@@ -489,6 +493,9 @@ html {
     margin-left: unset;
     margin-right: unset;
   }
+}
+.header .appBadges img {
+  cursor: pointer;
 }
 .header-mobilemenu {
   display: flex;
@@ -587,6 +594,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
+  cursor: pointer;
 }
 @media (min-width: 768px) {
   .footer-left-links-link {
@@ -634,6 +642,7 @@ html {
 .footer-right img {
   max-width: 133px;
   max-height: 38px;
+  cursor: pointer;
 }
 
 .hero .container {
@@ -750,9 +759,11 @@ html {
 .hero-content-heading-ctas-left {
   background-color: #7c3aed;
   color: #fff;
+  cursor: pointer;
 }
 .hero-content-heading-ctas-right {
   color: #7c3aed;
+  cursor: pointer;
 }
 .hero-content-heading-ctas-right img {
   margin-right: 10px;
@@ -815,6 +826,7 @@ html {
     gap: 64px;
   }
 }
+
 .features {
   display: flex;
 }
